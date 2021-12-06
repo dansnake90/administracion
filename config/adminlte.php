@@ -284,16 +284,16 @@ return [
             'can'      => 'admin.tags.index'
         ],
        
-        ['header' => 'OPCIONES DE BLOG'],
+        ['header' => 'OPCIONES DE FICHA'],
         [
-            'text'       => 'Lista de post',
-            'route'        => 'admin.posts.index',
+            'text'       => 'Lista de fichas',
+            'route'        => 'admin.fichas.index',
             'icon'     => 'fas fa-fw fa-clipboard',
-            'can'      => 'admin.posts.index'
+            /* 'can'      => 'admin.fichas.index' */
         ],
         [
             'text'       => 'Crear nuevo post',
-            'route'        => 'admin.posts.create',
+            'route'        => 'admin.fichas.create',
             'icon'     => 'fas fa-fw fa-file',
             'can'      => 'admin.posts.create'
         ],

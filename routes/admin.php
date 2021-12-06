@@ -9,6 +9,7 @@ use App\Http\Controllers\Admin\PostController;
 use App\Http\Controllers\Admin\TagController;
 use App\Http\Controllers\Admin\UserController;
 use App\Http\Controllers\Admin\RoleController;
+use App\Http\Controllers\Admin\FichaController;
 
 Route::get('admin', [HomeController::class, 'index'])->middleware('can:admin.index')->name('admin.index');
 //nombre de las rutas
@@ -23,5 +24,5 @@ Route::resource('categories', CategoryController::class)->except('show')->names(
 
 Route::resource('tags', TagController::class)->except('show')->names('admin.tags');
 
-Route::resource('post', PostController::class)->except('show')->names('admin.posts');
+Route::resource('fichas', FichaController::class)->except('show')->names('admin.fichas');
 

@@ -9,9 +9,24 @@
         <form method="POST" action="{{ route('register') }}">
             @csrf
 
+
             <div>
-                <x-jet-label for="name" value="{{ __('Name') }}" />
-                <x-jet-input id="name" class="block mt-1 w-full" type="text" name="name" :value="old('name')" required autofocus autocomplete="name" />
+                <x-jet-label for="name" value="{{ __('Función') }}" />
+                <select name="rol" id="rol" class="form-select rounded-md shadow-sm mt-1 block w-full">
+            @foreach($roles as $role)
+              <option value="{{ $role->name }}">{{ $role->name }}</option>
+            @endforeach
+          </select>
+            </div>
+
+            <div>
+                <x-jet-label for="name" value="{{ __('Nombre') }}" />
+                <x-jet-input id="firstname" class="block mt-1 w-full" type="text" name="firstname" :value="old('firstname')" required autofocus autocomplete="firstname" />
+            </div>
+            
+            <div>
+                <x-jet-label for="name" value="{{ __('Apellido') }}" />
+                <x-jet-input id="lastname" class="block mt-1 w-full" type="text" name="lastname" :value="old('lastname')" required autofocus autocomplete="lastname" />
             </div>
 
             <div class="mt-4">

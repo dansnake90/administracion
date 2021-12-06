@@ -9,7 +9,7 @@
     <h1>Listas de roles</h1>
 @stop
 
-@section('content')
+                                                                                                        @section('content')
 
 @if (session('info'))
 

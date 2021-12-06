@@ -14,6 +14,7 @@
                     <tr>
                         <th>ID</th>
                         <th>Nombre</th>
+                        <th>Apellido Paterno</th>
                         <th>Email</th>
                         <th></th>
                     </tr>
@@ -23,7 +24,8 @@
                     @foreach ($users as $user)
                     <tr>
                         <td>{{$user->id}}</td>
-                        <td>{{$user->name}}</td>
+                        <td>{{$user->firstname}}</td>
+                        <td>{{$user->lastname}}</td>
                         <td>{{$user->email}}</td>
                         <td>
                             <a class="btn btn-primary btn-sm" href="{{route('admin.users.edit', $user)}}">Editar</a>

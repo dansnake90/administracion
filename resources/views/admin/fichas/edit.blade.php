@@ -18,13 +18,13 @@
     <div class="card">
 
         <div class="card-body">
-            {!! Form::model($post,['route' => ['admin.posts.update', $post], 'autocomplete' => 'off', 'files' => true, 'method' => 'put']) !!}
+            {!! Form::model($ficha,['route' => ['admin.fichas.update', $ficha], 'autocomplete' => 'off', 'files' => true, 'method' => 'put']) !!}
            
            {{--  {!! Form::hidden('user_id', auth()->user()->id) !!} --}}
 
-            @include('admin.posts.partials.form')
+            @include('admin.fichas.partials.form')
 
-            {!! Form::submit('Actualizar post', ['class' => 'btn btn-primary']) !!}
+            {!! Form::submit('Actualizar datos', ['class' => 'btn btn-primary']) !!}
 
 
             {!! Form::close() !!}
@@ -50,6 +50,35 @@
         height: 100%;
 
     }
+
+    
+    fieldset {
+    min-width: 290px;
+}
+
+    fieldset.scheduler-border {
+    border: 1px groove #ddd !important;
+    padding: 0 1.4em 1.4em 1.4em !important;
+    margin: 0 0 1.5em 0 !important;
+    -webkit-box-shadow:  0px 0px 0px 0px #000;
+            box-shadow:  0px 0px 0px 0px #000;
+}
+
+    legend.scheduler-border {
+        font-size: 1rem !important;
+        font-weight: bold !important;
+        text-align: left !important;
+        width:auto;
+        padding:0 10px;
+        border-bottom:none;
+    }
+
+   legend {
+
+font-size: 1rem;
+font-weight: bold !important;
+
+}
 
 
 </style>

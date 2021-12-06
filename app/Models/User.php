@@ -30,9 +30,11 @@ class User extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'name',
+        'firstname',
+        'lastname',
         'email',
         'password',
+        'estado_id'
     ];
 
     /**
@@ -71,6 +73,17 @@ class User extends Authenticatable
         return $this->hasMany(Post::class);
 
 
+    }
+
+    public function ficha(){
+
+        return $this->hasOne(Ficha::class);
+
+
+    }
+
+    public function estado(){
+        return $this->hasOne('App\Models\Estado');
     }
 
 }

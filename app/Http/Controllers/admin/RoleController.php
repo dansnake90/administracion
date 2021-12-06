@@ -20,6 +20,8 @@ class RoleController extends Controller
         $roles = Role::all();
 
         return view('admin.roles.index', compact('roles'));
+
+        
     }
 
     /**
@@ -112,5 +114,13 @@ class RoleController extends Controller
         $role->delete();
 
         return redirect()->route('admin.roles.index', $role)->with('info', 'El rol se eliminó con éxito.');
+    }
+
+    public function register()
+    {
+        $roles = Role::all();
+
+        return view('auth.register', compact('roles'));
+
     }
 }
